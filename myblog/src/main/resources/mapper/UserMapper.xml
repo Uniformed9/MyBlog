@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.myblog.mapper.UserMapper">
 
-</beans>
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.myblog.entity.User">
+        <id column="id" property="id" />
+        <result column="user_name" property="userName" />
+        <result column="password" property="password" />
+        <result column="status" property="status" />
+        <result column="email" property="email" />
+        <result column="nickname" property="nickname" />
+        <result column="avatar" property="avatar" />
+    </resultMap>
+
+</mapper>

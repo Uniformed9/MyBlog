@@ -15,6 +15,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -123,5 +124,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                 return userDto;
             }
         }
+    }
+    @Override
+    public Map<Integer, User> getUserMap() {
+        return userMapper.getUserMap();
     }
 }

@@ -14,5 +14,7 @@ import java.util.List;
 import java.util.Map;
 @Mapper
 public interface UserMapper extends BaseMapper<User>{
-
+    @MapKey("id")
+    @Select("select id,user_name from user")
+    Map<Integer, User> getUserMap();
 }

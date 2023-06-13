@@ -30,5 +30,11 @@ public class User implements Serializable {
 
     @ApiModelProperty(value = "用户是否禁用 0表示禁用 1表示正常")
     private Integer status;
+    @ApiModelProperty(value = "昵称")
+    private String nickname;
+    @ApiModelProperty(value = "邮箱")
+    private  String email;
+    @ApiModelProperty(value = "头像")
+    private  String avatar;
 
 }
